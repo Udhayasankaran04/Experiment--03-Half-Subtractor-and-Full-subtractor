@@ -33,11 +33,11 @@ Write the detailed procedure here
 
 
 ## Program:
-/*
+```
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
 Developed by: UDHAYA SANKARAN M 
 RegisterNumber: 212222110051
-*/
+
 
 ## Output:
 ## HALF SUBTRACTOR
@@ -56,6 +56,7 @@ output diff,borr;
 assign diff=a^b^bin;
 assign borr=((~a)&b)|(b&bin)|((~a)&bin);
 endmodule
+```
 ## Truthtable
 ## HALF SUBTRACTOR
 ![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/fcccb625-8b90-4638-a7cc-34f5189a12e8)
