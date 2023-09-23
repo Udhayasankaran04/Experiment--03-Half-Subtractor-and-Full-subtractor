@@ -42,36 +42,39 @@ RegisterNumber: 212222110051
 ## Output:
 ## HALF SUBTRACTOR
 
-module HALF_SUB(a,b,diff,borr)
+module HALF_SUB(a,b,di,bo);
 input a,b;
-output diff,borr;
-assign diff=(a^b)
-assign borr=a((~a)&b);
-end module;
+output di,bo;
+assign di=(a^b);
+assign bo=((~a)&b);
+endmodule 
 
 ## FULL SUBTRACTOR
-module FULL_SUB (a,b,bin,diff,borr);
+module FULL_SUB(a,b,bin,di,bo);
 input a,b,bin;
-output diff,borr;
-assign diff=a^b^bin;
-assign borr=((~a)&b)|(b&bin)|((~a)&bin);
+output di,bo;
+assign di=a^b^bin;
+assign bo=((~a&b))|(b&bin)|((~a)&bin);
 endmodule
 ```
 ## Truthtable
 ## HALF SUBTRACTOR
-![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/fcccb625-8b90-4638-a7cc-34f5189a12e8)
+![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/fe7d7ece-347d-4628-8387-2b20f2341b7c)
 ## FULL SUBTRACTOR
-![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/0d2c53c9-4fc3-4ba9-aabf-8939071cbc3c)
+![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/36340f80-1a90-4213-8946-98b747ea3f40)
+
 ##  RTL realization
 ## HALF SUBTRACTOR
-![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/3bfcb8c5-d294-4bf1-a07d-33635bb90a7b)
+![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/f5f29085-01cd-409a-85b6-ad1418552378)
 ## FULL SUBTRACTOR
-![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/48b425f1-0413-4435-8e86-29718ec1269b)
+![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/4eb135ac-a1e9-4bae-88bc-c304f899bd59)
 
 ## Timing diagram 
 ## HALF SUBTRACTOR
-![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/ced5d5a4-9c5f-4873-8f01-a6255e9b31d5)
+![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/edc2f1f2-ed83-4552-9526-7cd97e594998)
+
 ## FULL SUBTRACTOR
-![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/5bb3c96c-df2e-47cf-ab9c-af2309303f04)
+![image](https://github.com/Udhayasankaran04/Experiment--03-Half-Subtractor-and-Full-subtractor/assets/119393933/f07b4d3a-273b-4a1d-9a79-877cd58dd0ec)
+
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
