@@ -40,16 +40,19 @@ RegisterNumber: 212222110051
 
 
 ## Output:
-## HALF SUBTRACTOR
 
+## HALF SUBTRACTOR
+```
 module HALF_SUB(a,b,di,bo);
 input a,b;
 output di,bo;
 assign di=(a^b);
 assign bo=((~a)&b);
 endmodule 
+```
 
 ## FULL SUBTRACTOR
+```
 module FULL_SUB(a,b,bin,di,bo);
 input a,b,bin;
 output di,bo;
